@@ -1,0 +1,26 @@
+.root {
+    -fx-border-width: 3px;
+    -fx-border-color: red;
+}
+
+/* Toolbar */
+.toolbar {
+    -fx-border-width: 3px;
+    -fx-border-color: red;
+}
+
+.button-circle {
+    -fx-border-width: 3px;
+    -fx-border-color: red;
+}
+
+.button-rect {
+    -fx-border-width: 3px;
+    -fx-border-color: red;
+}
+
+/* Drawing Area */
+.drawing-area {
+    -fx-border-width: 3px;
+    -fx-border-color: red;
+}
