@@ -1,6 +1,7 @@
 package org.drawing.components;
 
 import javafx.scene.control.Button;
+import javafx.scene.shape.Shape;
 
 /**
  * Common place for convenient Button defaults and abstractions
@@ -11,12 +12,19 @@ public class FxButton extends Button {
     }
 
     private FxButton(String style, Runnable onAction) {
-        getStyleClass().add(style);
-        setOnAction(_ -> onAction.run());
+        this(style, null, onAction);
     }
 
-    public static FxButton button(String style, Runnable onAction) {
-        return new FxButton(style, onAction);
+    private FxButton(String style, Shape shape, Runnable onAction) {
+        getStyleClass().add(style);
+        setOnAction(_ -> onAction.run());
+        if(shape != null) {
+            setShape(shape);
+        }
+    }
+
+    public static FxButton button(String style, Shape shape, Runnable onAction) {
+        return new FxButton(style, shape, onAction);
     }
 
     public static FxButton button(Runnable onAction) {

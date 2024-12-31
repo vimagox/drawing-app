@@ -20,6 +20,7 @@ class DrawingArea extends FxScrollPane {
 
     DrawingArea() {
         super(FxBox.v("drawing-area"));
+//        VBox.setVgrow(getContent(), Priority.ALWAYS);
         this.selectables = new ArrayList<>();
         this.selected = new SimpleObjectProperty<>();
         this.selected.addListener((o, ov, nv) -> {
@@ -41,6 +42,7 @@ class DrawingArea extends FxScrollPane {
 
     void add(Node node) {
         addContent(node);
+        node.setManaged(false);
         if(node instanceof FxSelectable selectable) {
             selectables.add(selectable);
             selectable.selectedProperty()

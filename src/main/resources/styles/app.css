@@ -1,36 +1,38 @@
 .root {
-    -fx-border-width: 10;
-    -fx-border-color: black;
+    -fx-font-size: 2em;
+    -fx-background-color: white;
 }
 
 /* Toolbar */
 .toolbar {
-    -fx-border-width: 0 0 5 0;
+    -fx-border-width: 0 0 3 0;
     -fx-border-color: black;
+    -fx-min-height: 25px;
 }
 
-.button-circle {
-    -fx-border-width: 4;
-    -fx-border-color: black;
-    -fx-min-width: 4;
-    -fx-min-height: 4;
-    -fx-max-width: 4;
-    -fx-max-height: 4;
-    -fx-border-radius: 4;
+.toolbar > .circle {
+    -fx-background-color: black;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+    -fx-background-radius: 20px;
 }
 
-.button-rect {
-    -fx-border-width: 3px;
-    -fx-border-color: red;
+.toolbar > .rect {
+    -fx-background-color: black;
+    -fx-min-width: 100px;
+    -fx-min-height: 20px;
+    -fx-max-width: 100px;
+    -fx-max-height: 20px;
 }
 
 /* Drawing Area */
 .drawing-area {
-    -fx-border-width: 3px;
-    -fx-border-color: red;
 }
 
 .selected {
     -fx-border-width: 10px!important;
     -fx-border-color: blue!important;
+    -fx-background-color: purple!important;
 }

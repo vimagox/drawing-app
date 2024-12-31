@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
  * Common place for convenient HBox/VBox defaults and abstractions
  */
 public class FxBox {
+    // Horizontal Box
     public static class H extends HBox {
         public H(String style, Node... nodes) {
             getStyleClass().add(style);
@@ -28,6 +29,7 @@ public class FxBox {
         public void add(Node... nodes) { for(Node node: nodes) add(node); }
     }
 
+    // Vertical Box
     public static class V extends VBox {
         public V(String style, Node... nodes) {
             getStyleClass().add(style);

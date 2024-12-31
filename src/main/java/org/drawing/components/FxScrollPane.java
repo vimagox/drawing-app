@@ -10,6 +10,8 @@ import javafx.scene.layout.Pane;
 public class FxScrollPane extends ScrollPane {
     public FxScrollPane(Node node) {
         super(node);
+        setFitToHeight(true);
+        setFitToWidth(true);
     }
 
     public void addContent(Node node) {
