@@ -13,3 +13,11 @@ Basic application to:
 ```sh
 ./gradlew run
 ```
+
+## Assumptions
+- shapes in toolbar expect a click to be added
+- using same cursor for adding (click) and moving (drag)
+
+## TODOs
+- the toggle for the "selected" style could be improved
+- shapes could possibly reuse the selection/unselection

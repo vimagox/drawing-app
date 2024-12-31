@@ -20,7 +20,7 @@ public class App extends Application {
             FxButton.button("circle",
                     new Circle(25,25,25), () -> drawingArea.add(FxShape.circle())),
             FxButton.button("rect",
-                    new Rectangle(150, 30), () -> drawingArea.add(FxShape.rect()))
+                    new Rectangle(100, 30), () -> drawingArea.add(FxShape.rect()))
         );
         Scene scene = new Scene(FxBox.v(toolbar, drawingArea), 800, 600);
         VBox.setVgrow(drawingArea, Priority.ALWAYS);

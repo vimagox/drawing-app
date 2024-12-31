@@ -20,7 +20,8 @@ public class FxShape  {
             super(25, 25, 25, DEFAULT_COLOR);
             getStyleClass().add("fx-circle");
             this.selectedProperty = new SimpleBooleanProperty();
-            setOnMouseClicked(_ -> selectedProperty.set(!selectedProperty.get()));
+            //TODO must be a better way to do this. ie: StyleBooleanProperty????
+            //TODO reuse this among shapes
             this.selectedProperty.addListener((o, ov, nv) -> {
                 if(nv) {
                     getStyleClass().add("selected");
@@ -28,6 +29,7 @@ public class FxShape  {
                     getStyleClass().remove("selected");
                 }
             });
+            setOnMouseClicked(_ -> selectedProperty.set(!selectedProperty.get()));
         }
         public BooleanProperty selectedProperty() { return selectedProperty; }
     }
@@ -36,12 +38,13 @@ public class FxShape  {
     public static class FxRectangle extends Rectangle implements FxSelectable {
         private final BooleanProperty selectedProperty;
         private FxRectangle() {
-            super(150, 30, DEFAULT_COLOR);
+            super(100, 30, DEFAULT_COLOR);
             getStyleClass().add("fx-rect");
             this.selectedProperty = new SimpleBooleanProperty();
             setOnMouseClicked(_ -> selectedProperty.set(!selectedProperty.get()));
+            //TODO must be a better way to do this. ie: StyleBooleanProperty????
             this.selectedProperty.addListener((o, ov, nv) -> {
-                if(nv) {
+                if(nv && ov != nv) {
                     getStyleClass().add("selected");
                 } else {
                     getStyleClass().remove("selected");
